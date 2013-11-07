@@ -1,0 +1,9 @@
+<h3><%= link_to "New Post", new_post_path %></h3>
+<ol>
+  <% @posts.each do |post| %>
+    <li>
+      <p>Title:<a href="/posts/<%=post.id%>" ><%= post.title %></a></p>
+      <p>Post:<%= post.body %></p>
+    </li>
+  <% end %>
+</ol>

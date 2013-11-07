@@ -1,0 +1,4 @@
+<%= form_for ([@model, @model.comments.build], :remote => true) do |f| %>
+  <%= f.text_area :text, placeholder: "comment"%> <br>
+  <%= f.submit %>
+<% end %>

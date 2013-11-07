@@ -1,0 +1,6 @@
+<%= form_for (@photo, :remote => true) do |f| %>
+  Title: <%= f.text_field :title  %> <br/>
+  Post: <%= f.text_field :body, :required => true  %> <br/>
+  Image: <%= f.text_field :image, :required => true  %> <br/>
+  <%= f.submit "Create" %>
+<% end %>

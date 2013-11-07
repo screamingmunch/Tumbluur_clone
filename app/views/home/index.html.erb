@@ -1,0 +1,27 @@
+<h1>Home#index</h1>
+<h2>Text Posts</h2>
+<h3><%= link_to "New Post", new_post_path %></h3>
+<ol>
+  <% @posts.each do |post| %>
+
+    <li>
+      <p>Title: <a href="/posts/<%=post.id%>" ><%= post.title %></a></p>
+      <p>Post: <%= post.body %></p>
+      <p>Comments: <a href="/posts/<%=post.id%>/comments">Comments</a></p>
+    </li>
+  <% end %>
+</ol>
+
+<h2>Photo Posts</h2>
+<h3><%= link_to "New Photo", new_photo_path %></h3>
+<ol>
+  <% @photos.each do |photo| %>
+    <li>
+      <p>Title: <%= photo.title %></p>
+      <p>Desc: <%= photo.body %></p>
+      <p>Photo: <img src="<%= photo.image %>" alt="photo" height="200px"></p>
+  </li>
+<% end %>
+</ol>
+
+<!-- if @model.class.to_s == "xx " -->
