@@ -4,6 +4,10 @@
     <li>
       <p>Title:<a href="/posts/<%=post.id%>" ><%= post.title %></a></p>
       <p>Post:<%= post.body %></p>
+      <p>Comments: </p>
+      <% post.comments.each do |comment| %>
+      <p><%= comment.text %><p>
+      <% end %>
     </li>
   <% end %>
 </ol>

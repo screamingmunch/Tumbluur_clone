@@ -1,3 +1,5 @@
+require 'pry'
+
 class CommentsController < ApplicationController
   def index
 
@@ -20,6 +22,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    # binding.pry
     if params[:post_id]
       @model = Post.find(params[:post_id])
       @model.comments.create(params[:comment])
@@ -31,6 +34,7 @@ class CommentsController < ApplicationController
       redirect_to photos_path
 
     end
+
   end
 
 end
